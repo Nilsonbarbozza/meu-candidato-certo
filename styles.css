@@ -1,0 +1,1026 @@
+body {
+  padding: 0; /* Remove todo o padding */
+  margin: 0; /* Remove as margens */
+  background-color: #f9f9f9;
+  width: 100%; /* Corrigido para não depender do viewport (vw) */
+  overflow-x: hidden; /* Remove o scroll lateral */
+  display: block;
+  font-family: 'Poppins', sans-serif; /* Adiciona uma fonte padrão */
+  line-height: 1.6; /* Melhor legibilidade */
+}
+
+
+.rodape {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-color: #fff3;
+  background-color: #ffffff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  backdrop-filter: blur(20px);
+  max-width: 400px;
+}
+
+.logo {
+  width: 80px;
+  height: 70px;
+  max-width: 100px;
+  max-height: 70px;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.logo2 {
+  display: flex;
+  justify-content: center;
+  color: #00AA6C;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+}
+
+.nomenav {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: row;
+      align-items: center;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      height: auto;
+  }
+
+  .logo {
+      width: 60px;
+      height: 60px;
+  }
+
+  .logo2 {
+      font-size: 0.9rem;
+  }
+
+  .nomenav {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+      max-width: 100%;
+      padding: 0.5rem;
+      height: auto;
+  }
+
+  .logo {
+      width: 50px;
+      height: 50px;
+  }
+
+  .logo2 {
+      font-size: 0.7rem;
+  }
+
+  .nomenav {
+      flex-direction: column;
+  }
+}
+
+
+/*headline*/
+  
+.rotating-shapes {
+  width: 100%;
+  height: 100%;
+  animation: rotate 20s linear infinite;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.6;
+  position: relative;
+  padding: 0;
+}
+
+.spacer {
+  flex: 1;
+  max-height: 12px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-heading {
+  font-size: 3rem; /* Tamanho original */
+  max-width: 48rem;
+  color: #00AA6C;
+  margin-top: 48px;
+  margin-bottom: 6px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 3.2rem;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  max-width: 40rem;
+  text-align: center;
+  color: #9E9E9E;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.25rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem; /* Reduz o tamanho da fonte no mobile */
+    line-height: 2.5rem;
+    margin-top: 32px;
+  }
+
+  .hero-description {
+    font-size: 1.2rem; /* Ajuste para melhorar a leitura em telas menores */
+    line-height: 1.5rem;
+    max-width: 90%; /* Para garantir que o texto não fique muito comprimido */
+    margin-top: 24px;
+  }
+
+  .spacer {
+    max-height: 8px; /* Reduz a altura do espaçamento em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 1.75rem; /* Tamanho menor para telas pequenas */
+    line-height: 2.25rem;
+    margin-top: 24px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem; /* Ajuste adicional para telas pequenas */
+    max-width: 85%;
+  }
+}
+
+
+/*Cards*/
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* Espaço entre os cards */
+  flex-wrap: wrap; /* Para garantir a responsividade */
+  width: 100%;
+  max-width: 980px;
+  margin: 74px auto;
+  margin-bottom: 48px;
+  
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destacar os cards */
+  overflow: hidden; /* Esconde partes da imagem que ultrapassem os limites do card */
+  transition: all 0.5s ease-in; /* Transição suave para hover */
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+/*anuncio1*/
+
+.anuncio {
+  width: 980px;
+  height: 130px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 0;
+  margin: 0 auto;
+  background-image: url(src/banner1.svg);
+  background-size: cover;
+  background-repeat: no-repeat; /* Impede que o banner se repita */
+  background-position: center; /* Centraliza o background */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .anuncio {
+    width: 100%; /* O banner ocupa 100% da largura disponível */
+    height: 120px; /* Reduz levemente a altura para tablets */
+    background-size: contain; /* Ajusta a imagem de fundo para caber corretamente */
+  }
+}
+
+@media (max-width: 768px) {
+  .anuncio {
+    height: 100px; /* Ajuste para melhorar a proporção em tablets menores */
+    background-size: contain; /* Ajusta o background para caber melhor */
+  }
+}
+
+@media (max-width: 480px) {
+  .anuncio {
+    height: 80px; /* Reduz a altura do banner para smartphones */
+    background-size: contain; /* Garante que o background se ajuste sem cortar */
+    background-position: center; /* Centraliza o background no mobile */
+  }
+}
+
+/*anuncio2*/
+
+.anuncio2 {
+  width: 980px;
+  height: 130px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 0;
+  margin: 0 auto;
+  background-image: url(src/banner2.svg);
+  background-size: cover;
+  background-repeat: no-repeat; /* Impede que o banner se repita */
+  background-position: center; /* Centraliza o background */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .anuncio2 {
+    width: 100%; /* O banner ocupa 100% da largura disponível */
+    height: 120px; /* Reduz levemente a altura para tablets */
+    background-size: contain; /* Ajusta a imagem de fundo para caber corretamente */
+  }
+}
+
+@media (max-width: 768px) {
+  .anuncio2 {
+    height: 100px; /* Ajuste para melhorar a proporção em tablets menores */
+    background-size: contain; /* Ajusta o background para caber melhor */
+  }
+}
+
+@media (max-width: 480px) {
+  .anuncio2 {
+    height: 80px; /* Reduz a altura do banner para smartphones */
+    background-size: contain; /* Garante que o background se ajuste sem cortar */
+    background-position: center; /* Centraliza o background no mobile */
+  }
+}
+
+/* Destaque */
+
+.section-news {
+  padding: 0px 120px;
+  background-color: #f9f9f9;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .section-news {
+    padding: 0px 60px; /* Reduzir o padding em telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-news {
+    padding: 0px 30px; /* Ajusta ainda mais o padding */
+  }
+
+  .news-title {
+    font-size: 1.5rem; /* Reduzir o tamanho do título */
+  }
+
+  .view-more {
+    padding: 6px 12px; /* Ajusta o padding do botão */
+  }
+}
+
+@media (max-width: 480px) {
+
+  
+  .news-title {
+    font-size: 1.rem; /* Tamanho do título ainda menor */
+  }
+
+  .view-more {
+    padding: 4px 8px; /* Ajusta o padding do botão */
+  }
+
+  .news-image {
+    height: 180px; /* Reduz a altura da imagem */
+  }
+
+  .news-headline {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte da manchete */
+  }
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 24px;
+}
+
+.news-title {
+  font-size: 2rem;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.view-more {
+  padding: 8px 16px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more:hover {
+  background-color: #0056b3;
+}
+
+.news-cards {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 24px;
+}
+
+.news-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: scale(1.03);
+}
+
+.news-image {
+  width: 100%;
+  height: 220px;
+}
+
+.news-overlay::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.100));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.news-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+}
+
+.news-headline {
+  padding-left: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.news-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: start;
+  z-index: 2;
+}
+
+.news-link:hover .news-headline {
+  color: #00AA6C;
+}
+
+  /*Destaque2*/
+
+  .section-highlights {
+    padding: 0px 20px; /* Ajustado para melhor responsividade */
+    background-color: #f9f9f9;
+}
+
+.highlights-header {
+    margin-left: 12px;
+    text-align: left;
+}
+
+.highlights-title {
+    font-size: 2rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: 24px;
+    
+}
+
+.highlights-content {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+}
+
+.highlights-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+.highlight-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 170px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: scale(1.03);
+}
+
+.highlight-image {
+    width: 200px;
+    height: 170px;
+    object-fit: cover;
+}
+
+.highlight-text {
+    padding: 16px;
+}
+
+.highlight-headline {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.highlight-description {
+    font-size: 0.9rem;
+    color: #9E9E9E;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+  .highlight-description {
+    font-size: 0.7rem;
+    color: #9E9E9E;
+    margin: 0px;
+    line-height: 15px
+
+    
+}
+
+}
+
+.highlight-read-more {
+    display: inline-block;
+    margin-top: 8px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.highlight-read-more:hover {
+    text-decoration: underline;
+}
+
+.highlight-ads {
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 558px;
+    background-image: url(assets/banner3.png);
+    background-size: cover;
+}
+
+/* Media Query para Responsividade */
+@media (max-width: 768px) {
+    .highlights-content {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+        padding: 12px;
+    }
+
+    .highlight-ads {
+        width: 100%; /* Ajusta a largura do banner de anúncios */
+        height: auto; /* Permite que a altura seja ajustada automaticamente */
+        margin-top: 0px; /* Adiciona espaçamento acima */
+    }
+}
+
+  
+  /*enquete*/
+
+  .section-enquete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    background-color: #f9f9f9;
+
+  }
+  
+  .enquete-container {
+    display: grid;
+    flex-direction: row;
+    background-color: #40288A;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 980px;
+  }
+  
+  .enquete-title-svg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .enquete-title-svg img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  .enquete-content {
+    flex: 3;
+    padding-left: 20px;
+  }
+  
+  .enquete-question {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .opcoes-votacao {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .opcao-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .candidato-foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .candidato-nome {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+  
+  .botao-votar {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .mensagem-agradecimento {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  .resultados-enquete {
+    margin-top: 20px;
+  }
+  
+  .resultado-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .resultado-item p {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .barra-resultado {
+    flex: 2;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 8px;
+    height: 20px;
+  }
+  
+  .preenchimento {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 4px;
+  }
+  
+  .porcentagem {
+    width: 50px;
+    text-align: right;
+  }
+  
+  /* foster- Rodapé/*
+
+  /* Estilo do rodapé */
+.site-footer {
+  margin-top: 40px;
+  background-color: #40288A; /* Cor de fundo do rodapé */
+  padding-top: 20px; /* Espaçamento interno */
+  padding-bottom: 20px;
+  color: #fff; /* Cor do texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container do rodapé */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 980px;
+  width: 100%;
+  gap: 80px; /* Espaçamento entre logo e nav */
+}
+
+/* Logo e descrição */
+.footer-logo-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; /* Espaçamento entre logo e descrição */
+  max-width: 300px; /* Ajusta conforme necessário */
+  
+}
+
+.footer-logo {
+  width: 100px; /* Tamanho do logo */
+  height: auto;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #f9f9f9; /* Cor do texto de descrição */
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+/* Navegação do rodapé */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding-top: 22px;
+}
+
+.footer-link {
+  color: #f9f9f9; /* Cor dos links */
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-link:hover {
+  color: #fff; /* Cor dos links ao passar o mouse */
+}
+
+/* Estilo dos ícones sociais */
+.footer-social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Ajusta os ícones em várias linhas em telas menores */
+}
+
+.social-icon {
+  color: #fff; /* Cor dos ícones */
+  font-size: 20px; /* Tamanho dos ícones */
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #00AA6C; /* Cor dos ícones ao passar o mouse */
+}
+
+.imgrodape {
+  width: 60px;
+  padding-top: 10px;
+}
+
+.iconewhats, .iconeemail, .iconeinstagram {
+  width: 40px;
+}
+
+/* Ajustes para tamanhos menores */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 980px;
+    width: 100%;
+    gap: 24px; /* Espaçamento entre logo e nav */
+  }
+
+  .footer-nav {
+    padding-top: 15px;
+  }
+
+  .footer-link {
+    font-size: 10px; /* Reduz o tamanho do texto para melhor ajuste */
+  }
+
+  .social-icon {
+    font-size: 18px; /* Reduz o tamanho dos ícones */
+  }
+
+  .imgrodape {
+    width: 50px;
+  }
+
+  .iconewhats, .iconeemail, .iconeinstagram {
+    width: 30px; /* Ajusta o tamanho dos ícones sociais */
+  }
+}
+
+
+/*javascript*/
+
+.resultado-container {
+  margin-top: 20px;
+  color: white;
+}
+
+.barra-progresso {
+  width: 100%;
+  background-color: #e0e0e0; /* Background color for the progress bar */
+  border-radius: 5px;
+  height: 20px; /* Height of the progress bar */
+  overflow: hidden;
+}
+
+.preenchimento {
+  height: 100%;
+  background-color: #00AA6C; /* Color of the filled portion */
+  transition: width 0.5s; /* Smooth transition */
+}
+
+.botao-desativado {
+  background-color: #ccc; /* Cor de fundo quando desativado */
+  color: #666; /* Cor do texto quando desativado */
+  cursor: not-allowed; /* Muda o cursor para indicar que não pode clicar */
+  opacity: 0.7; /* Reduz a opacidade para um efeito visual */
+}
+
+
+/* pagina1/*
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo da navbar */
+.navbarpagina {
+  background-color: #40288A;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 500px
+
+}
+
+/* Estilo do logotipo */
+.logo2 {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  padding-left: 24px;
+  padding-right: 24px;
+  
+  
+}
+
+/* Estilo da imagem do logotipo */
+.logo-img2 {
+  width: 100px; /* Ajuste o tamanho do logotipo conforme necessário */
+  height: auto;
+}
+
+/* Estilo do título "Notícias" */
+.titulo-noticias {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo do container da notícia */
+.noticia-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%; /* Ajustado para melhor responsividade */
+  max-width: 800px; /* Define um limite máximo para o tamanho */
+  border-radius: 8px;
+}
+
+/* Estilo do título da notícia */
+.titulo-noticia {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 34px;
+}
+
+/* Estilo do subtítulo */
+.subtitulo-noticia {
+  color: #4f4f4f; /* Cinza escuro */
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 18px;
+}
+
+/* Estilo da data de publicação */
+.data-publicacao {
+  color: #7a7a7a; /* Cinza mais claro */
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Estilo da imagem da notícia */
+.noticia-imagem {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 0px; /* Bordas arredondadas */
+  margin-bottom: 16px; /* Espaço abaixo da imagem */
+}
+
+/* Media Query para Responsividade */
+@media (max-width: 768px) {
+  .noticia-container {
+    width: 95%; /* Ajusta a largura para telas menores */
+    padding: 15px; /* Reduz o padding para melhor ajuste */
+  }
+
+  .navbarpagina {
+    gap: 80px;
+  }
+
+  .titulo-noticia {
+    font-size: 28px; /* Ajusta o tamanho da fonte */
+    line-height: 28px;
+  }
+
+  .subtitulo-noticia {
+    font-size: 12px; /* Ajusta o tamanho da fonte */
+  }
+
+  .data-publicacao {
+    font-size: 10px; /* Ajusta o tamanho da fonte */
+  }
+}
+
+/*tagcompartilhar*/*
+
+.compartilhar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.compartilhar-link {
+    font-size: 18px;
+    color: #25D366; /* Cor do ícone do WhatsApp */
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #25D366;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.compartilhar-link:hover {
+    background-color: #25D366;
+    color: white;
+}
+
+.compartilhar-link i {
+    margin-right: 10px;
+    font-size: 20px;
+}
